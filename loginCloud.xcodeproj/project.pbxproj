@@ -8,20 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8A0D8C681D340A2100C8BCB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C671D340A2100C8BCB0 /* AppDelegate.swift */; };
-		8A0D8C6A1D340A2100C8BCB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C691D340A2100C8BCB0 /* ViewController.swift */; };
+		8A0D8C6A1D340A2100C8BCB0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C691D340A2100C8BCB0 /* LoginViewController.swift */; };
 		8A0D8C6D1D340A2100C8BCB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D8C6B1D340A2100C8BCB0 /* Main.storyboard */; };
 		8A0D8C6F1D340A2100C8BCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D8C6E1D340A2100C8BCB0 /* Assets.xcassets */; };
 		8A0D8C721D340A2100C8BCB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0D8C701D340A2100C8BCB0 /* LaunchScreen.storyboard */; };
+		8A0D8C7A1D340BB800C8BCB0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C791D340BB800C8BCB0 /* MainViewController.swift */; };
+		8A0D8C7C1D340D2400C8BCB0 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C7B1D340D2400C8BCB0 /* DAO.swift */; };
+		8A0D8C7E1D340DAE00C8BCB0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D8C7D1D340DAE00C8BCB0 /* User.swift */; };
+		8A0D8C821D340EDD00C8BCB0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0D8C811D340EDD00C8BCB0 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A0D8C641D340A2100C8BCB0 /* loginCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0D8C671D340A2100C8BCB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A0D8C691D340A2100C8BCB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A0D8C691D340A2100C8BCB0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A0D8C6C1D340A2100C8BCB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A0D8C6E1D340A2100C8BCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A0D8C711D340A2100C8BCB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0D8C731D340A2100C8BCB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A0D8C791D340BB800C8BCB0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8A0D8C7B1D340D2400C8BCB0 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		8A0D8C7D1D340DAE00C8BCB0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A0D8C801D340ED600C8BCB0 /* loginCloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = loginCloud.entitlements; sourceTree = "<group>"; };
+		8A0D8C811D340EDD00C8BCB0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0D8C821D340EDD00C8BCB0 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,7 @@
 		8A0D8C5B1D340A2100C8BCB0 = {
 			isa = PBXGroup;
 			children = (
+				8A0D8C811D340EDD00C8BCB0 /* CloudKit.framework */,
 				8A0D8C661D340A2100C8BCB0 /* loginCloud */,
 				8A0D8C651D340A2100C8BCB0 /* Products */,
 			);
@@ -54,12 +65,16 @@
 		8A0D8C661D340A2100C8BCB0 /* loginCloud */ = {
 			isa = PBXGroup;
 			children = (
+				8A0D8C801D340ED600C8BCB0 /* loginCloud.entitlements */,
 				8A0D8C671D340A2100C8BCB0 /* AppDelegate.swift */,
-				8A0D8C691D340A2100C8BCB0 /* ViewController.swift */,
+				8A0D8C791D340BB800C8BCB0 /* MainViewController.swift */,
+				8A0D8C691D340A2100C8BCB0 /* LoginViewController.swift */,
 				8A0D8C6B1D340A2100C8BCB0 /* Main.storyboard */,
 				8A0D8C6E1D340A2100C8BCB0 /* Assets.xcassets */,
 				8A0D8C701D340A2100C8BCB0 /* LaunchScreen.storyboard */,
 				8A0D8C731D340A2100C8BCB0 /* Info.plist */,
+				8A0D8C7B1D340D2400C8BCB0 /* DAO.swift */,
+				8A0D8C7D1D340DAE00C8BCB0 /* User.swift */,
 			);
 			path = loginCloud;
 			sourceTree = "<group>";
@@ -96,6 +111,12 @@
 				TargetAttributes = {
 					8A0D8C631D340A2100C8BCB0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C5676RKFWG;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0D8C6A1D340A2100C8BCB0 /* ViewController.swift in Sources */,
+				8A0D8C7C1D340D2400C8BCB0 /* DAO.swift in Sources */,
+				8A0D8C7A1D340BB800C8BCB0 /* MainViewController.swift in Sources */,
+				8A0D8C6A1D340A2100C8BCB0 /* LoginViewController.swift in Sources */,
+				8A0D8C7E1D340DAE00C8BCB0 /* User.swift in Sources */,
 				8A0D8C681D340A2100C8BCB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = loginCloud/loginCloud.entitlements;
 				INFOPLIST_FILE = loginCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andremachadoparente.loginCloud;
@@ -260,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = loginCloud/loginCloud.entitlements;
 				INFOPLIST_FILE = loginCloud/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andremachadoparente.loginCloud;
